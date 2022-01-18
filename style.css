@@ -1,0 +1,208 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background-color: #e5e5e5;
+}
+
+.white {
+  background-color: #fff;
+}
+
+.container {
+  max-width: 935px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 2%;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  background-color: #fff;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo ion-icon {
+  font-size: 20px;
+}
+
+.logo img {
+  border-left: 2px solid #dbdbdb;
+  margin-left: 10px;
+  padding-left: 10px;
+}
+
+.pesquisa input {
+  width: 215px;
+  height: 28px;
+  outline: none;
+  border: 1px solid #fafafa;
+  background-color: #ccc;
+  color: #979797;
+  line-height: 40px;
+  text-align: center;
+  font-size: 12px;
+}
+
+.funcionalidades {
+  display: flex;
+  align-items: center;
+}
+.funcionalidades img {
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 614px) {
+  .header {
+    justify-content: space-between;
+  }
+  .pesquisa {
+    display: none;
+  }
+
+  .funcionalidades img:nth-of-type(1n + 2) {
+    width: 45%;
+    display: none;
+  }
+
+  .logo {
+    width: 60%;
+    justify-content: space-between;
+  }
+
+  .logo img {
+    border-left: none;
+    text-align: center;
+  }
+}
+
+/*CONTENT*/
+
+.content {
+  position: relative;
+  margin-top: 88px;
+  display: flex;
+  gap: 28px;
+}
+
+.publicacao {
+  width: 614px;
+  height: 114px;
+  background-color: #fff;
+}
+
+.stories {
+  margin: 20px 0;
+  padding: 0 2%;
+  display: flex;
+  overflow-x: hidden;
+}
+
+.storie {
+  width: 70px;
+  text-align: center;
+}
+
+.storie + .storie {
+  margin-left: 10px;
+}
+
+.storie img {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 2px solid red;
+  background-color: green;
+}
+
+.storie p {
+  text-align: center;
+  white-space: nowrap;
+  width: 70px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.arrow-left {
+  width: 100%;
+  position: relative;
+  top: 0;
+  right: 0;
+}
+
+.arrow-left > img {
+  position: absolute;
+  top: 20px;
+  left: 570px;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+/*TODO: fazer media query dos stories para 634px*/
+
+.sidebar {
+  max-width: 293px;
+  width: 100%;
+  height: 400px;
+  /* background-color: red; */
+}
+
+.perfil {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.perfil > img {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  /* margin: 0 15px 0 5px; */
+  margin-right: 5px;
+}
+
+.perfil p:nth-of-type(1) {
+  color: black;
+  font-size: 14px;
+  font-weight: 600;
+}
+.perfil p:nth-of-type(2) {
+  color: black;
+  font-size: 12px;
+  font-weight: 200;
+}
+
+.sugestao {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.sugestao p:nth-of-type(1) {
+  margin: 20px 0;
+  color: #8e8e8e;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.sugestao p:nth-of-type(2) {
+  color: #262626;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  cursor: pointer;
+}
