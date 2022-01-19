@@ -13,6 +13,15 @@ body {
   background-color: #fff;
 }
 
+.ml-5 {
+  margin-left: 5px;
+}
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .container {
   max-width: 935px;
   width: 100%;
@@ -65,35 +74,11 @@ body {
   cursor: pointer;
 }
 
-@media screen and (max-width: 614px) {
-  .header {
-    justify-content: space-between;
-  }
-  .pesquisa {
-    display: none;
-  }
-
-  .funcionalidades img:nth-of-type(1n + 2) {
-    width: 45%;
-    display: none;
-  }
-
-  .logo {
-    width: 60%;
-    justify-content: space-between;
-  }
-
-  .logo img {
-    border-left: none;
-    text-align: center;
-  }
-}
-
 /*CONTENT*/
 
 .content {
   position: relative;
-  margin-top: 88px;
+  margin-top: 20px;
   display: flex;
   gap: 28px;
 }
@@ -152,26 +137,24 @@ body {
   border-radius: 50%;
   cursor: pointer;
 }
-/*TODO: fazer media query dos stories para 634px*/
 
 .sidebar {
   max-width: 293px;
   width: 100%;
   height: 400px;
-  /* background-color: red; */
 }
 
 .perfil {
   margin-top: 20px;
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 
 .perfil > img {
   width: 56px;
   height: 56px;
   border-radius: 50%;
-  /* margin: 0 15px 0 5px; */
   margin-right: 5px;
 }
 
@@ -186,13 +169,20 @@ body {
   font-weight: 200;
 }
 
+.perfil a {
+  font-size: 12px;
+  font-weight: 500;
+  color: #139ef2;
+  text-decoration: none;
+}
+
 .sugestao {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: 20px 0 -5px 0;
 }
 .sugestao p:nth-of-type(1) {
-  margin: 20px 0;
   color: #8e8e8e;
   font-weight: 500;
   font-size: 12px;
@@ -205,4 +195,171 @@ body {
   font-size: 12px;
   line-height: 14px;
   cursor: pointer;
+}
+
+.post {
+  margin-top: 44px;
+  padding-bottom: 20px;
+}
+
+.header-post {
+  width: 100%;
+  padding: 20px 2%;
+  border-radius: 3px 3px 0 0;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.perfil-post {
+  display: flex;
+  align-items: center;
+}
+
+.perfil-post > img {
+  width: 32px;
+  height: 32px;
+  margin-right: 8px;
+}
+
+.perfil-post p {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #262626;
+}
+
+.settings {
+  cursor: pointer;
+}
+
+.img-post img {
+  max-width: 614px;
+  width: 100%;
+}
+
+.interacao-info-post {
+  margin-top: -5px;
+  padding: 15px 2%;
+  border-radius: 0 0 3px 3px;
+  background-color: #ffffff;
+}
+
+.interacao-post {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.interacao-post ion-icon {
+  font-size: 16.6px;
+  cursor: pointer;
+}
+
+.left-info-post {
+  display: flex;
+  align-items: center;
+}
+
+.left-info-post img {
+  width: 16.5px;
+  cursor: pointer;
+}
+
+.left-info-post img + img {
+  margin-left: 15px;
+}
+
+.info-post {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.info-post img {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.info-post p {
+  margin-right: 8px;
+  font-size: 14px;
+}
+
+@media screen and (max-width: 935px) {
+  .sidebar {
+    display: none;
+  }
+  .content {
+    gap: 0;
+    justify-content: center;
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 614px) {
+  .publicacao {
+    width: 100%;
+    height: 114px;
+    background-color: #e5e5e5;
+  }
+  .stories {
+    padding: 0 2%;
+  }
+  .storie p {
+    font-size: 12px;
+  }
+  .arrow-left {
+    display: none;
+  }
+  .container {
+    padding: 0;
+  }
+  .pesquisa {
+    display: none;
+  }
+
+  .funcionalidades img:nth-of-type(1n + 2) {
+    width: 45%;
+    display: none;
+  }
+
+  .logo {
+    width: 60%;
+    justify-content: space-between;
+  }
+
+  .logo img {
+    border-left: none;
+    text-align: center;
+  }
+  .header {
+    justify-content: space-between;
+    padding: 15px 2%;
+  }
+
+  /***scrollbar css config ****/
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #b8b8b8 #ffffff;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 9px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #ffffff;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #b8b8b8;
+    border-radius: 10px;
+    border: 3px solid #ffffff;
+  }
+  /*****/
 }
