@@ -6,7 +6,7 @@
 }
 
 body {
-  background-color: #e5e5e5;
+  background-color: #FAFAFA;
 }
 
 .white {
@@ -27,6 +27,7 @@ body {
   width: 100%;
   margin: 0 auto;
   padding: 0 2%;
+  position: relative;
 }
 
 .header {
@@ -68,10 +69,28 @@ body {
 .funcionalidades {
   display: flex;
   align-items: center;
+  position: relative;
 }
 .funcionalidades img {
   margin-left: 20px;
   cursor: pointer;
+}
+
+.notificacao{
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: red;
+  color:#ffffff;
+  position: absolute;
+  bottom:13px;
+  left: 30px;
+  cursor: pointer;
+}
+.notificacao span{
+  padding-left: 3px;
+  font-weight: 700;
+  font-size: 12px;
 }
 
 /*CONTENT*/
@@ -108,9 +127,10 @@ body {
 .storie img {
   width: 56px;
   height: 56px;
+  padding: 1px;
   border-radius: 50%;
-  border: 2px solid red;
-  background-color: green;
+  border: 2px solid  red;
+  background-color: #ffffff;
 }
 
 .storie p {
@@ -126,6 +146,7 @@ body {
   position: relative;
   top: 0;
   right: 0;
+  filter: drop-shadow( 3px 3px 2px rgba(0, 0, 0, .7))
 }
 
 .arrow-left > img {
@@ -140,10 +161,21 @@ body {
 
 /**SIDEBAR***/
 
+.sedibar-container{
+  max-width: 300px;
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  position: relative;
+  right:2%;
+}
 .sidebar {
+  position: fixed;
   max-width: 293px;
   width: 100%;
-  height: 400px;
+  height: 100vh;
+  margin-right: 20px;
+  padding:0 20px
 }
 
 .perfil {
@@ -291,7 +323,7 @@ body {
 }
 
 @media screen and (max-width: 935px) {
-  .sidebar {
+  .sedibar-container {
     display: none;
   }
   .content {
@@ -309,6 +341,9 @@ body {
   }
   .stories {
     padding: 0 2%;
+  }
+  .funcionalidades{
+    padding-left: 1px;
   }
   .storie p {
     font-size: 12px;
