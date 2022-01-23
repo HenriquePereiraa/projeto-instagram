@@ -6,7 +6,7 @@
 }
 
 body {
-  background-color: #FAFAFA;
+  background-color: #fafafa;
 }
 
 .white {
@@ -76,21 +76,26 @@ body {
   cursor: pointer;
 }
 
-.notificacao{
+.notificacao {
   width: 20px;
   height: 20px;
   border-radius: 50%;
   background-color: red;
-  color:#ffffff;
+  color: #ffffff;
   position: absolute;
-  bottom:13px;
+  bottom: 13px;
   left: 30px;
   cursor: pointer;
 }
-.notificacao span{
+.notificacao span {
   padding-left: 3px;
   font-weight: 700;
   font-size: 12px;
+}
+
+/*NAV-MOBILE*/
+.nav-mobile{
+  display: none;
 }
 
 /*CONTENT*/
@@ -129,7 +134,7 @@ body {
   height: 56px;
   padding: 1px;
   border-radius: 50%;
-  border: 2px solid  red;
+  border: 2px solid red;
   background-color: #ffffff;
 }
 
@@ -146,7 +151,7 @@ body {
   position: relative;
   top: 0;
   right: 0;
-  filter: drop-shadow( 3px 3px 2px rgba(0, 0, 0, .7))
+  filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.7));
 }
 
 .arrow-left > img {
@@ -161,13 +166,13 @@ body {
 
 /**SIDEBAR***/
 
-.sedibar-container{
+.sedibar-container {
   max-width: 300px;
   width: 100%;
   height: 100vh;
   margin: 0 auto;
   position: relative;
-  right:2%;
+  right: 2%;
 }
 .sidebar {
   position: fixed;
@@ -175,7 +180,7 @@ body {
   width: 100%;
   height: 100vh;
   margin-right: 20px;
-  padding:0 20px
+  padding: 0 20px;
 }
 
 .perfil {
@@ -334,6 +339,27 @@ body {
 }
 
 @media screen and (max-width: 614px) {
+  /*NAV-MOBILE*/
+  .nav-mobile {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+    -webkit-box-shadow: -1px -8px 15px -9px rgba(0, 0, 0, 0.22);
+    box-shadow: -1px -8px 15px -9px rgba(0, 0, 0, 0.22);
+  }
+
+  .nav-mobile ion-icon {
+    padding: 0 2%;
+    font-size: 20px;
+    cursor: pointer;
+  }
   .publicacao {
     width: 100%;
     height: 114px;
@@ -342,7 +368,7 @@ body {
   .stories {
     padding: 0 2%;
   }
-  .funcionalidades{
+  .funcionalidades {
     padding-left: 1px;
   }
   .storie p {
